@@ -5,6 +5,7 @@ import { ArrowChevronDown, CardHeart } from "@gravity-ui/icons";
 import { Separator } from "@heroui/react";
 import { Chip } from "@heroui/react";
 import { Button } from "@heroui/react";
+import Link from "next/link";
 
 const PhotoCard = ({ photo }) => {
   return (
@@ -34,9 +35,11 @@ const PhotoCard = ({ photo }) => {
         
       </div>
 
+      <Link href={`allPhotos/${photo.id}`}>
       <Button variant="outline"  className="w-full hover:bg-purple-700 hover:text-white">
           View
         </Button>
+        </Link>
     </Card>
   );
 };

@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@gravity-ui/icons": "^2.18.0",
+    "@gravity-ui/uikit": "^7.38.0",
+    "@heroui/avatar": "^2.2.26",
     "@heroui/react": "^3.0.3",
     "@heroui/styles": "^3.0.3",
     "next": "16.2.6",
