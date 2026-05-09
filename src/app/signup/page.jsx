@@ -1,6 +1,7 @@
 "use client";
 import { authClient } from "@/lib/auth-client";
 import { Check } from "@gravity-ui/icons";
+import { Icon } from "@iconify/react";
 import {
   Button,
   Card,
@@ -35,6 +36,12 @@ export default function SignUpPage() {
     if(!error){
         router.push('/')
     }
+  };
+
+  const handleGoogleSignIn = async () => {
+    await authClient.signIn.social({
+      provider: "google",
+    });
   };
 
   return (
@@ -108,6 +115,15 @@ export default function SignUpPage() {
           </Button>
         </div>
       </Form>
+      <p className="text-center text-gray-600">or</p>
+            <Button
+              onClick={handleGoogleSignIn}
+              className="w-full"
+              variant="tertiary"
+            >
+              <Icon icon="devicon:google" />
+              Sign in with Google
+            </Button>
     </Card>
   );
 }
